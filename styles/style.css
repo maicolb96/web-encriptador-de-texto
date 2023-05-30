@@ -2,9 +2,16 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: #F3F5FC;
+}
+
+main{
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 100%;
+}
+
+header{
+    margin-bottom: 10px;
 }
 
 #logo{
@@ -12,11 +19,17 @@ body{
 }
 
 .content_textarea{
-    margin: 20px;
-    padding: 20px;
+    margin: 0px 20px;
+    padding: 0px 20px;
 }
 
-#input_text{
+.content_textarea p{
+    margin: 5px 10px;
+    font-family: 'Monospace' sans-serif;
+    color: #969696;
+}
+
+.input_text{
     padding-top: 20px;
     width: 100%;
     height: 300px;
@@ -27,19 +40,85 @@ body{
     line-height: 150%;
     color: #0A3871;
     text-align: center;
+    resize: none;
+    border-radius: 20px;
+    border-color: rgba(204, 204, 204, 0.589);
 }
 
 .content_button{
-    padding: 20px;
-    text-align: center;
+    display: grid;
+    align-items: center;
+    padding: 40px 40px 0px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
 }
 
-aside{
+.my-btn{
+    margin: auto;
+    width: 80%;
+}
+
+.my-btn:hover{
+    width: 82% !important;
+}
+
+.content_credits{
+    height: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.content_credits p{
+    font-size: 12px;
+    font-family: 'Monospace' sans-serif;
+    color: #5f5f5f;
+}
+
+/*aside{
     background-color: #d1d1d1;
-    margin: 40px 40px 0px 0px;
+    margin: 0px 40px 0px 0px;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
+}*/
+
+aside{
+    margin: 0px 40px 0px 0px;
+    /* border-radius: 20px; */
+    padding: 0px 20px;
+    text-align: center;
+    border-left: 1px solid #5f5f5f25;
+}
+
+aside h2{
+    margin: 30px;
+    font-family: 'Monospace' sans-serif;
+    color: #242424;
+}
+
+aside h3{
+    font-family: 'Monospace' sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #595959;
+}
+
+#found_text{
+    display: block;
+    padding: 0 !important;
+}
+
+#found_text textarea{
+    height: auto;
+    min-height: 280px;
+}
+
+#found_text textarea:focus{
+    outline: none;
+}
+
+#not_found_text{
+    display: none;
 }
 
 

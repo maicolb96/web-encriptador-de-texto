@@ -14,26 +14,40 @@
 </head>
 
 <body>
-    <section>
-        <header>
-            <img id="logo" src="images/logo.png" alt="logo">
-        </header>
+    <header>
+        <img id="logo" src="images/logo.png" alt="logo">
+    </header>
 
-        <div class="content_textarea">
-            <textarea name="input_text" id="input_text" maxlength="1000" placeholder="Ingrese el texto aquí"></textarea>
-            <p>Limite de caracteres 1000.</p>
-        </div>
+    <main>
+        <section>
+            <div class="content_textarea">
+                <textarea name="input_text" class="input_text" maxlength="1000"
+                    placeholder="Ingrese el texto aquí"></textarea>
+                <p>Limite de caracteres 1000.</p>
+            </div>
 
-        <div class="content_button">
-            <button>Hola</button>
-            <button>Chao</button>
-        </div>
-    </section>
-    <aside>
-        <img src="images/text_no_found.png" alt="text_not_found">
-        <h2>Ningún mensaje fue encontrado.</h2>
-        <h3>Ingrese un texto para encriptar o desencriptar.</h3>
-    </aside>
+            <div class="content_button">
+                <button id="btn-encript" type="button" class="btn btn-primary btn-lg my-btn">Encriptar</button>
+                <button id="btn-decript" type="button" class="btn btn-secondary btn-lg my-btn">Desencriptar</button>
+            </div>
+
+            <div class="content_credits">
+                <p>© Developed by Michael Blandón</p>
+                <p>ONE + Alura Latam</p>
+            </div>
+        </section>
+
+        <aside>
+            <div id="found_text" class="content_textarea">
+                <textarea name="input_text" class="input_text" maxlength="1000" readonly></textarea>
+            </div>
+            <div id="not_found_text">
+                <img src="images/text_no_found.png" alt="text_not_found">
+                <h2>Ningún mensaje fue encontrado.</h2>
+                <h3>Ingrese un texto para encriptar o desencriptar.</h3>
+            </div>
+        </aside>
+    </main>
 </body>
 
 </html>
