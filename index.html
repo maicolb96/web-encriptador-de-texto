@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 
 <body>
     <section>
         <header>
-           <img id="logo" src="images/logo.png" alt="logo">
+            <img id="logo" src="images/logo.png" alt="logo">
         </header>
-        <textarea name="input_text" id="input_text" maxlength="1000" placeholder="Ingrese el texto aquí"></textarea>
-        
+
+        <div class="content_textarea">
+            <textarea name="input_text" id="input_text" maxlength="1000" placeholder="Ingrese el texto aquí"></textarea>
+            <p>Limite de caracteres 1000.</p>
+        </div>
+
         <div class="content_button">
-            <button>HOla</button>
-            <button>CHao</button>
+            <button>Hola</button>
+            <button>Chao</button>
         </div>
     </section>
     <aside>
-
+        <img src="images/text_no_found.png" alt="text_not_found">
+        <h2>Ningún mensaje fue encontrado.</h2>
+        <h3>Ingrese un texto para encriptar o desencriptar.</h3>
     </aside>
-
-    <script src="js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </body>
 
 </html>
