@@ -15,7 +15,13 @@
 
 <body>
     <header>
-        <img id="logo" src="images/logo.png" alt="logo">
+        <a href="https://www.oracle.com/co/education/oracle-next-education/" target="_blank"><img id="logo" src="images/logo.png" alt="logo"></a>
+        
+        <div class="icons_net">
+            <a href="https://github.com/maicolb96" target="_blank"><img class="ico_net" src="images/git-ico.png" alt="git_icon"></a>
+            <a href="https://app.aluracursos.com/user/michael-blandon" target="_blank"><img class="ico_net" src="images/alura-ico.png" alt="git_icon"></a>
+            <a href="https://www.linkedin.com/in/maicol-esteban-blandon-agudelo-253255a0/" target="_blank"><img class="ico_net" src="images/link-ico.png" alt="git_icon"></a>
+        </div>
     </header>
 
     <main>
@@ -40,6 +46,10 @@
         <aside>
             <div id="found_text" class="content_textarea">
                 <textarea name="input_text" class="input_text" maxlength="1000" readonly></textarea>
+                <div class="content_button2">
+                    <button id="btn-copy" type="button" class="btn btn-primary btn-lg my-btn">Copiar Texto</button>
+                    <button id="btn-clear" type="button" class="btn btn-outline-secondary btn-lg my-btn">Borrar Todo</button>
+                </div>
             </div>
             <div id="not_found_text">
                 <img src="images/text_no_found.png" alt="text_not_found">
