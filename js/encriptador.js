@@ -15,8 +15,12 @@ function encriptar(){
     encripted = true;
     
     let text = textarea_input.value;
-    let l = {'a':'ai', 'e':'enter', 'i':'imes', 'o':'ober', 'u':'ufat'}
-    textarea_output.value = text.replace(/[aeiou]/gi,function(match) {return l[match]});
+    let l = {
+             'a':'ai', 'e':'enter', 'i':'imes', 'o':'ober', 'u':'ufat',
+             '0':'i3j', '1':'d22', '2':'ret4','3':'ms01','4':'pop',
+             '5':'1qw','6':'op00','7':'eje3','8':'ser4','9':'loli'
+            }
+    textarea_output.value = text.replace(/[aeiou0123456789]/gi,function(match) {return l[match]});
 }
 
 function desencriptar(){
@@ -27,8 +31,12 @@ function desencriptar(){
     encripted = true;
     
     let text = textarea_input.value;
-    let p = {'ai':'a', 'enter':'e', 'imes':'i', 'ober':'o', 'ufat':'u'};
-    textarea_output.value = text.replace(/(?:ai|enter|imes|ober|ufat)/gi,function(match) {return p[match.toLowerCase()]});
+    let p = {
+                'ai':'a', 'enter':'e', 'imes':'i', 'ober':'o', 'ufat':'u',
+                'i3j':'0','d22':'1','ret4':'2','ms01':'3','pop':'4',
+                '1qw':'5','op00':'6','eje3':'7','ser4':'8','loli':'9'
+            };
+    textarea_output.value = text.replace(/(?:ai|enter|imes|ober|ufat|i3j|d22|ret4|ms01|pop|1qw|op00|eje3|ser4|loli)/gi,function(match) {return p[match.toLowerCase()]});
 }
 
 function copy(){
