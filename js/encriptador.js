@@ -13,8 +13,22 @@ function encriptar(){
     content_found.style.display = "block";
     main_content.style.gridTemplateColumns = "40% 60%";
     encripted = true;
+    
+    let text = textarea_input.value;
+    let l = {'a':'ai', 'e':'enter', 'i':'imes', 'o':'ober', 'u':'ufat'}
+    textarea_output.value = text.replace(/[aeiou]/gi,function(match) {return l[match]});
+}
 
-    textarea_output.value = textarea_input.value;
+function desencriptar(){
+    content_not_found.style.display = "none";
+    content_buttons.style.display = "none";
+    content_found.style.display = "block";
+    main_content.style.gridTemplateColumns = "40% 60%";
+    encripted = true;
+    
+    let text = textarea_input.value;
+    let p = {'ai':'a', 'enter':'e', 'imes':'i', 'ober':'o', 'ufat':'u'};
+    textarea_output.value = text.replace(/(?:ai|enter|imes|ober|ufat)/gi,function(match) {return p[match.toLowerCase()]});
 }
 
 function copy(){
@@ -42,7 +56,7 @@ function onfocus_textarea(){
 function reset(){
     let text = textarea_input.value;
     let cleanText = text.normalize("NFD").replace(/[^\w\s]/gi, '');
-    textarea_input.value = cleanText;
+    textarea_input.value = cleanText.toLowerCase();
 
     if (textarea_input.value==""){
         content_not_found.style.display = "block";
