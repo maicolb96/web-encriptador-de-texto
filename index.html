@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 
@@ -24,16 +23,16 @@
         </div>
     </header>
 
-    <main>
+    <main id="main_content">
         <section>
             <div class="content_textarea">
-                <textarea name="input_text" class="input_text" maxlength="1000"
+                <textarea id="textarea_input" name="input_text" class="input_text" maxlength="1000"
                     placeholder="Ingrese el texto aquí"></textarea>
                 <p>Limite de caracteres 1000.</p>
             </div>
 
-            <div class="content_button">
-                <button id="btn-encript" type="button" class="btn btn-primary btn-lg my-btn">Encriptar</button>
+            <div id="content_buttons" class="content_button">
+                <button id="btn-encript" onclick="encriptar()" type="button" class="btn btn-primary btn-lg my-btn">Encriptar</button>
                 <button id="btn-decript" type="button" class="btn btn-secondary btn-lg my-btn">Desencriptar</button>
             </div>
 
@@ -45,10 +44,13 @@
 
         <aside>
             <div id="found_text" class="content_textarea">
-                <textarea name="input_text" class="input_text" maxlength="1000" readonly></textarea>
+                <textarea id="textarea_output" name="input_text" class="input_text" maxlength="1000" readonly></textarea>
+                <div id="alert" class="alert" role="alert">
+                    Has copiado el texto correctamente.
+                </div>
                 <div class="content_button2">
-                    <button id="btn-copy" type="button" class="btn btn-primary btn-lg my-btn">Copiar Texto</button>
-                    <button id="btn-clear" type="button" class="btn btn-outline-secondary btn-lg my-btn">Borrar Todo</button>
+                    <button onclick="copy()" id="btn-copy" type="button" class="btn btn-primary btn-lg my-btn">Copiar Texto</button>
+                    <button onclick="reloading()" id="btn-clear" type="button" class="btn btn-outline-secondary btn-lg my-btn">Borrar Todo</button>
                 </div>
             </div>
             <div id="not_found_text">
@@ -58,6 +60,7 @@
             </div>
         </aside>
     </main>
+    <script src="js/encriptador.js"></script>
 </body>
 
 </html>

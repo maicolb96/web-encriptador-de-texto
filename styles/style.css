@@ -13,8 +13,8 @@ main{
 header{
     margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px;
 }
 
 header a:first-child{
@@ -27,6 +27,7 @@ header a:first-child{
 
 .icons_net{
     padding: 20px;
+    text-align: right;
 }
 
 .ico_net{
@@ -78,7 +79,7 @@ header a:first-child{
     align-items: center;
     margin-top: 20px;
     grid-template-columns: auto;
-    grid-template-rows: 100% 100%;
+    grid-template-rows: auto 100%;
 }
 
 .my-btn{
@@ -103,13 +104,9 @@ header a:first-child{
     color: #5f5f5f;
 }
 
-/*aside{
-    background-color: #d1d1d1;
-    margin: 0px 40px 0px 0px;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-}*/
+#alert{
+    display: none;
+}
 
 aside{
     margin: 0px 40px 0px 0px;
@@ -139,7 +136,7 @@ aside h3{
 
 #found_text textarea{
     height: auto;
-    min-height: 280px;
+    min-height: 300px;
 }
 
 #found_text textarea:focus{
